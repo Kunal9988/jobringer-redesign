@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jobringer - Find Your Next Job</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jobringer - Jobs</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
     <div class="logo">Jobringer</div>
-    <nav class="desktop-nav">
+    <nav>
       <a href="#">Home</a>
       <a href="#">Jobs</a>
       <a href="#">About</a>
@@ -18,42 +18,86 @@
     </nav>
   </header>
 
+   <!--Job Search Bar Section -->
   <section class="search-section">
-    <input type="text" placeholder="Search by job title" />
-    <input type="text" placeholder="Location" />
-    <button>Search</button>
+    <div class="search-container">
+      <input type="text" placeholder="Search job title..." class="search-input" />
+      <select class="location-select">
+        <option value="">All Locations</option>
+        <option value="pune">Pune</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="delhi">Delhi</option>
+      </select>
+      <button class="search-button">Search</button>
+    </div>
   </section>
+  <main>
+    <aside>
+      <div class="filter">
+        <h3>Filter Jobs</h3>
+        <label for="keyword">Keyword</label>
+        <input type="text" id="keyword" placeholder="e.g. Developer" />
 
-  <section class="job-listings">
-    <div class="job-card">
-      <h3>Frontend Developer</h3>
-      <p><strong>Company:</strong> ABC Technologies</p>
-      <p><strong>Location:</strong> Pune, Maharashtra</p>
-      <a href="#" class="apply-btn">Apply Now</a>
-    </div>
-    <div class="job-card">
-      <h3>Backend Developer</h3>
-      <p><strong>Company:</strong> XYZ Solutions</p>
-      <p><strong>Location:</strong> Mumbai, Maharashtra</p>
-      <a href="#" class="apply-btn">Apply Now</a>
-    </div>
-    <div class="job-card">
-      <h3>UI/UX Designer</h3>
-      <p><strong>Company:</strong> Creative Minds</p>
-      <p><strong>Location:</strong> Bangalore, Karnataka</p>
-      <a href="#" class="apply-btn">Apply Now</a>
-    </div>
-      <div class="job-card">
-      <h3>Full Stack Developer</h3>
-      <p><strong>Company:</strong> Creative Minds</p>
-      <p><strong>Location:</strong> Noida, Uttar Pradesh</p>
-      <a href="#" class="apply-btn">Apply Now</a>
-    </div>
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="e.g. Mumbai" />
 
-  </section>
+        <label for="category">Category</label>
+        <select id="category">
+          <option>All Categories</option>
+          <option>Frontend</option>
+          <option>Backend</option>
+          <option>Design</option>
+          <option>Marketing</option>
+        </select>
+
+        <label for="type">Job Type</label>
+        <select id="type">
+          <option>All Types</option>
+          <option>Full-time</option>
+          <option>Part-time</option>
+          <option>Internship</option>
+        </select>
+
+        <label for="experience">Experience Level</label>
+        <select id="experience">
+          <option>All Levels</option>
+          <option>Fresher</option>
+          <option>1-3 years</option>
+          <option>3-5 years</option>
+          <option>5+ years</option>
+        </select>
+
+        <button class="apply-btn">Apply Filters</button>
+      </div>
+    </aside>
+
+    <section class="job-listings">
+      <article class="job-card">
+        <div class="job-title">Frontend Developer</div>
+        <div class="company">ABC Technologies</div>
+        <div class="location">Pune, Maharashtra</div>
+        <button class="apply-btn">Apply Now</button>
+      </article>
+
+      <article class="job-card">
+        <div class="job-title">Backend Developer</div>
+        <div class="company">XYZ Solutions</div>
+        <div class="location">Mumbai, Maharashtra</div>
+        <button class="apply-btn">Apply Now</button>
+      </article>
+
+      <article class="job-card">
+        <div class="job-title">UI/UX Designer</div>
+        <div class="company">Creative Minds</div>
+        <div class="location">Bangalore, Karnataka</div>
+        <button class="apply-btn">Apply Now</button>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Jobringer. All rights reserved.</p>
+    &copy; 2025 Jobringer. All rights reserved.
   </footer>
 
 </body>
